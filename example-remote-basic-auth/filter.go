@@ -3,12 +3,11 @@ package main
 import (
 	"encoding/base64"
 	"fmt"
+	"github.com/envoyproxy/envoy/contrib/golang/common/go/api"
 	"strconv"
 	"strings"
 
 	"net/http"
-
-	"github.com/envoyproxy/envoy/contrib/golang/filters/http/source/go/pkg/api"
 )
 
 type filter struct {
@@ -101,6 +100,21 @@ func (f *filter) EncodeTrailers(trailers api.ResponseTrailerMap) api.StatusType 
 }
 
 func (f *filter) OnDestroy(reason api.DestroyReason) {
+}
+
+func (f *filter) OnLog() {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (f *filter) OnLogDownstreamStart() {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (f *filter) OnLogDownstreamPeriodic() {
+	//TODO implement me
+	panic("implement me")
 }
 
 func main() {

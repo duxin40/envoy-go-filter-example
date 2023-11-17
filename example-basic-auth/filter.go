@@ -2,14 +2,28 @@ package main
 
 import (
 	"encoding/base64"
+	"github.com/envoyproxy/envoy/contrib/golang/common/go/api"
 	"strings"
-
-	"github.com/envoyproxy/envoy/contrib/golang/filters/http/source/go/pkg/api"
 )
 
 type filter struct {
 	callbacks api.FilterCallbackHandler
 	config    *config
+}
+
+func (f *filter) OnLog() {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (f *filter) OnLogDownstreamStart() {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (f *filter) OnLogDownstreamPeriodic() {
+	//TODO implement me
+	panic("implement me")
 }
 
 const secretKey = "secret"

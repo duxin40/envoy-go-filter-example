@@ -3,12 +3,26 @@ package main
 import (
 	"crypto/md5"
 	"encoding/hex"
-
-	"github.com/envoyproxy/envoy/contrib/golang/filters/http/source/go/pkg/api"
+	"github.com/envoyproxy/envoy/contrib/golang/common/go/api"
 )
 
 type filter struct {
 	callbacks api.FilterCallbackHandler
+}
+
+func (f *filter) OnLog() {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (f *filter) OnLogDownstreamStart() {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (f *filter) OnLogDownstreamPeriodic() {
+	//TODO implement me
+	panic("implement me")
 }
 
 const secretKey = "secret"
